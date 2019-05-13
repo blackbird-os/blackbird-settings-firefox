@@ -1,0 +1,21 @@
+# $Id$
+# Maintainer: James Kittsmiller (AJSlye) <james@nulogicsystems.com>
+
+pkgname=blackbird-settings-firefox
+pkgver=$(date +%Y.%m)
+pkgrel=2
+pkgdesc="Blackbird OS default settings for Firefox"
+arch=('any')
+url='https://github.com/blackbird-os/blackbird-settings-firefox'
+license=('GPL')
+depends=('firefox' 'plasma-browser-integration' 'firefox-ublock-origin' 'ocs-url' 'xdg-desktop-portal' 'xdg-desktop-portal-kde')
+
+package() {
+  cd ../..
+  cp -aR usr $pkgdir/
+  cp -aR etc $pkgdir/
+
+#Hook
+  install -Dm644 firefox-pre.hook $pkgdir/usr/share/libalpm/hooks/firefox-pre.hook
+  install -Dm644 firefox-post.hook $pkgdir/usr/share/libalpm/hooks/firefox-post.hook
+}

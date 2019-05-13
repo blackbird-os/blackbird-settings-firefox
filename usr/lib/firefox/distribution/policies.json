@@ -1,0 +1,13 @@
+{
+  "policies": {
+    "DisableProfileRefresh": true,
+    "DisplayBookmarksToolbar": true,
+    "DisplayMenuBar": true,
+    "Homepage": {
+      "URL": "https://www.google.com"
+    },
+    "NoDefaultBookmarks": true,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": ""
+  }
+}
