@@ -3,7 +3,7 @@
 
 pkgname=blackbird-settings-firefox
 pkgver=$(date +%Y.%m)
-pkgrel=2
+pkgrel=1
 pkgdesc="Blackbird OS default settings for Firefox"
 arch=('any')
 url='https://github.com/blackbird-os/blackbird-settings-firefox'
